@@ -108,7 +108,8 @@ export function upload (selector, options = {}) {
     	preview.querySelectorAll('.preview-remove').forEach(e => e.remove());
     	const previewInfo = preview.querySelectorAll('.preview-info');
     	previewInfo.forEach(clearPreview);
-        onUpload(files);
+        onUpload(files, previewInfo);
+        upload.style.display = 'none';
     }
 
 	open.addEventListener('click', triggerInput);
